@@ -1,0 +1,39 @@
+<form class="cars-editor" #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <h3>Добавить автомобиль:</h3>
+    <div class="alert alert-warning">
+        Поля выделенные красным обязательны к заполнению
+    </div>
+    <input name="name" placeholder="Название" 
+        required ngModel  #name="ngModel" />
+    <input name="price" placeholder="Цена" 
+        required pattern="^[1-9][0-9]{4,}$"
+        ngModel  #price="ngModel" />
+    <input name="mileage" placeholder="Пробег" 
+        required pattern="^[0-9]+$"
+        ngModel  #mileage="ngModel" />
+    <button [disabled]="!f.form.valid">Добавить</button>
+    <div *ngIf="name.errors && (name.dirty || name.touched)"
+             class="alert alert-danger">
+        <div [hidden]="!name.errors.required">
+            Название обязательно
+        </div>
+    </div>
+    <div *ngIf="price.errors && (price.dirty || price.touched)"
+             class="alert alert-danger">
+        <div [hidden]="!price.errors.required">
+            Цена обязательна
+        </div>
+        <div [hidden]="!price.errors.pattern">
+            Цена это целое число не меньше 10000
+        </div>
+    </div>
+    <div *ngIf="mileage.errors && (mileage.dirty || mileage.touched)"
+             class="alert alert-danger">
+        <div [hidden]="!mileage.errors.required">
+            Пробег обязателен
+        </div>
+        <div [hidden]="!mileage.errors.pattern">
+            Пробег это натуральное число
+        </div>
+    </div>
+</form>

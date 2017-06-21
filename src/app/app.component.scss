@@ -1,0 +1,42 @@
+body {
+    color: #555;
+}
+nav {
+    font-weight: 500;
+    text-align: center;
+}
+a,
+a:visited {
+    color: rgba(78, 197, 212, 1);
+    cursor: pointer;
+    margin: 5px;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+}
+a:hover,
+a:visited {
+    border-bottom: 1px solid;
+}
+h2 {
+    border-bottom: 3px solid rgba(78, 197, 212, 1);
+}
+input {
+    padding: 5px 8px;
+    border-color: 1px solid #555;
+}
+button {
+    padding: 6px 10px;
+    cursor: pointer;
+    transition: 0.175s;
+    background: rgba(240, 240, 240, 1);
+    border: 1px solid rgba(78, 197, 212, 1);
+}
+button:hover {
+    background: rgba(78, 197, 212, 1);
+    border: 1px solid rgba(240, 240, 240, 1);
+    color: white;
+}
+button:disabled {
+    background: #ccc;
+    color: #555;
+}

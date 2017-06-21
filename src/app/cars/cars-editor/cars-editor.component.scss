@@ -1,0 +1,27 @@
+.cars-editor {
+    background: rgba(180, 222, 228, 1);
+    border: 3px solid rgba(78, 197, 212, 1);
+    padding: 10px 15px;
+
+    .ng-invalid {
+        box-shadow: none;
+        border: 1px solid #ce4844;
+        background: #F9F2F4;
+    }
+
+    .alert {
+        padding: 10px;
+        margin: 5px 0;
+        border-radius: 3px;
+    }
+    .alert-danger {
+        border: 1px solid #ce4844;
+        color: #ce4844;
+        background:#F9F2F4;
+    }
+    .alert-warning {
+        border: 1px solid #aa6708;
+        color: #aa6708;
+        background:#fcf8e3;
+    }
+}

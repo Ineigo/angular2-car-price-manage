@@ -1,0 +1,11 @@
+<div>
+    <h2>Список Автомобилей</h2>
+    <cars-editor></cars-editor>
+    <div>
+        <ul class="cars-list">
+            <li *ngFor='let car of cars'>
+                <car-row [car]='car' [onRemove]='onRemove'></car-row>
+            </li>
+        </ul>
+    </div>
+</div>

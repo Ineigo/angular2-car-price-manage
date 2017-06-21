@@ -1,0 +1,14 @@
+.dashboard {
+    display: flex;
+    .dashboard-wrapper {
+        h3 {
+            color: rgba(78, 197, 212, 1);
+            //border-bottom: 3px solid rgba(78, 197, 212, 1);
+        }
+        flex-grow: 1;
+        text-align: center;
+    }
+    .dashboard-number {
+        font-size: 60px;
+    }
+}
